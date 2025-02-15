@@ -16,7 +16,7 @@ const Projects = () => {
     {
       title: "🍗KUSINELLA🍗",
       description: "A cookbook website featuring meals from Noelle's childhood.",
-      link: "https://github.com/NoelleAlt/CSS313", // Replace with your actual project link
+      link: "https://github.com/NoelleAlt/CSS313",
     },
   ];
 

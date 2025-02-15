@@ -1,4 +1,5 @@
 /* src/styles.css */
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
@@ -10,8 +11,9 @@ body {
   .navbar {
     display: flex;
     justify-content: center;
-    background-color: #333;
+    background-color: #4A90E2; /* Change to a more appealing color */
     padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   }
   
   .navbar a {
@@ -19,11 +21,13 @@ body {
     text-decoration: none;
     margin: 0 15px;
     padding: 10px 15px;
-    transition: background-color 0.3s;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, transform 0.3s; /* Add transform for hover effect */
   }
   
   .navbar a:hover {
-    background-color: #575757;
+    background-color: #575757; /* Darker background on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
   }
   
   .home, .projects, .about, .contact {
@@ -37,4 +41,43 @@ body {
   
   h1, h2 {
     color: #4A90E2;
+    text-align: center; /* Center align headings */
+  }
+  
+  .projects ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+  }
+  
+  .projects li {
+    background: #e7f3fe; /* Light background for project items */
+    margin: 10px 0; /* Space between items */
+    padding: 15px; /* Padding for items */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s; /* Add transition for hover effect */
+  }
+  
+  .projects li:hover {
+    transform: translateY(-3px); /* Lift effect on hover */
+  }
+  
+  .projects a {
+    color: #4A90E2; /* Link color */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  .projects a:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+
+
+.name-link {
+    color: #4A90E2; /* Match the theme color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make the name bold */
+  }
+  
+  .name-link:hover {
+    text-decoration: underline; /* Underline on hover */
   }
