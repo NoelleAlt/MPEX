@@ -1,83 +1,114 @@
 /* src/styles.css */
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    color: #333;
-  }
-  
-  .navbar {
-    display: flex;
-    justify-content: center;
-    background-color: #4A90E2; /* Change to a more appealing color */
-    padding: 15px 0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  .navbar a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    padding: 10px 15px;
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s, transform 0.3s; /* Add transform for hover effect */
-  }
-  
-  .navbar a:hover {
-    background-color: #575757; /* Darker background on hover */
-    transform: scale(1.05); /* Slightly enlarge on hover */
-  }
-  
-  .home, .projects, .about, .contact {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  h1, h2 {
-    color: #4A90E2;
-    text-align: center; /* Center align headings */
-  }
-  
-  .projects ul {
-    list-style-type: none; /* Remove default list styling */
-    padding: 0; /* Remove padding */
-  }
-  
-  .projects li {
-    background: #e7f3fe; /* Light background for project items */
-    margin: 10px 0; /* Space between items */
-    padding: 15px; /* Padding for items */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    transition: transform 0.3s; /* Add transition for hover effect */
-  }
-  
-  .projects li:hover {
-    transform: translateY(-3px); /* Lift effect on hover */
-  }
-  
-  .projects a {
-    color: #4A90E2; /* Link color */
-    text-decoration: none; /* Remove underline */
-  }
-  
-  .projects a:hover {
-    text-decoration: underline; /* Underline on hover */
-  }
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
 
+.dark-mode {
+  background-color: #333; /* Dark background */
+  color: #f4f4f4; /* Light text */
+}
 
-.name-link {
-    color: #4A90E2; /* Match the theme color */
-    text-decoration: none; /* Remove underline */
-    font-weight: bold; /* Make the name bold */
-  }
-  
-  .name-link:hover {
-    text-decoration: underline; /* Underline on hover */
-  }
+.navbar {
+  display: flex;
+  justify-content: center;
+  background-color: #4A90E2; /* Change to a more appealing color */
+  padding: 15px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  border-bottom: 2px solid #575757; /* Add a bottom border */
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  padding: 10px 15px;
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s, transform 0.3s; /* Add transform for hover effect */
+}
+
+.navbar a:hover {
+  background-color: #575757; /* Darker background on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.theme-toggle {
+  margin-left: 20px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #4A90E2; /* Match navbar color */
+  color: white;
+  transition: background-color 0.3s;
+  border: 2px solid #fff; /* Add a border to the button */
+}
+
+.theme-toggle:hover {
+  background-color: #575757; /* Darker background on hover */
+}
+
+.home, .projects, .about, .contact {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+  border: 1px solid #ccc; /* Add a light border */
+}
+
+.dark-mode .home, .dark-mode .projects, .dark-mode .about, .dark-mode .contact {
+  background: #444; /* Dark background for sections */
+  color: #f4f4f4; /* Light text for sections */
+  border: 1px solid #666; /* Darker border in dark mode */
+}
+
+h1, h2 {
+  color: #4A90E2;
+  text-align: center; /* Center align headings */
+  border-bottom: 2px solid #4A90E2; /* Add a bottom border to headings */
+  padding-bottom: 10px; /* Add some space below the heading */
+}
+
+.dark-mode h1, .dark-mode h2 {
+  color: #f4f4f4; /* Light headings in dark mode */
+  border-bottom: 2px solid #f4f4f4; /* Light border in dark mode */
+}
+
+.nav-button, .project-button {
+  background-color: #4A90E2; /* Match the navbar color */
+  color: white; /* Text color */
+  border: 2px solid #0c4885; /* Dark blue border in light mode */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px; /* Padding for the button */
+  margin: 5px; /* Space between buttons */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 16px; /* Font size */
+  transition: background-color 0.3s, transform 0.3s, border-color 0.3s; /* Smooth transition for hover effect */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+.nav-button:hover, .project-button:hover {
+  background-color: #575757; /* Darker background on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Dark mode button styles */
+.dark-mode .nav-button, .dark-mode .project-button {
+  background-color: #575757; /* Darker background in dark mode */
+  color: #f4f4f4; /* Light text in dark mode */
+  border: 2px solid #8fb9f0; /* Light border in dark mode */
+}
+
+.dark-mode .nav-button:hover, .dark-mode .project-button:hover {
+  background-color: #4A90E2; /* Change to navbar color on hover in dark mode */
+}
+
+/* Other styles remain unchanged */
